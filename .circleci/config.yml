@@ -164,20 +164,20 @@ workflows:
           context: WhiteSource
           api_key: 52ed27e27ad547728036f915595c625787967c58e702401eb96800bfa1f9444c
           config_file_path: "https://s3.amazonaws.com/file-system-agent/whitesource-fs-agent.config"
-      - install-dependencies
-      - compile:
+       - install-dependencies
+       - compile:
           requires: [install-dependencies]
-      - lint:
+       - lint:
           requires: [install-dependencies]
-      - dist:
+       - dist:
           requires: [compile]
-      - test-react-15:
+       - test-react-15:
           requires: [compile]
-      - test-react-16:
+       - test-react-16:
           requires: [compile]
-      - deploy-preview:
+       - deploy-preview:
           requires: [dist]
-      - deploy-npm:
+       - deploy-npm:
           requires: [dist, lint, test-react-15, test-react-16]
           filters:
             branches:
