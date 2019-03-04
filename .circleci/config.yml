@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 orbs:
   whitesource-scan: whitesource/whitesource-scan@18.10.2
