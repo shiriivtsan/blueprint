@@ -1,7 +1,4 @@
-
-
-orbs:
-  whitesource-scan: whitesource/whitesource-scan@18.10.2
+version: 2
 
 # this block contains anchors to reusable blocks of config.
 references:
@@ -157,27 +154,23 @@ jobs:
       - run: ./scripts/publish-npm-semver-tagged
 
 workflows:
-  version: 2.1
-    test:
-      jobs:
-       - whitesource-scan/scan:
-          context: WhiteSource
-          api_key: 52ed27e27ad547728036f915595c625787967c58e702401eb96800bfa1f9444c
-          config_file_path: "https://s3.amazonaws.com/file-system-agent/whitesource-fs-agent.config"
-       - install-dependencies
-       - compile:
+  version: 2
+  compile_lint_test_dist_deploy:
+    jobs:
+      - install-dependencies
+      - compile:
           requires: [install-dependencies]
-       - lint:
+      - lint:
           requires: [install-dependencies]
-       - dist:
+      - dist:
           requires: [compile]
-       - test-react-15:
+      - test-react-15:
           requires: [compile]
-       - test-react-16:
+      - test-react-16:
           requires: [compile]
-       - deploy-preview:
+      - deploy-preview:
           requires: [dist]
-       - deploy-npm:
+      - deploy-npm:
           requires: [dist, lint, test-react-15, test-react-16]
           filters:
             branches:
