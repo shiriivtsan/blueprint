@@ -20,7 +20,7 @@ If you rely heavily on mobile interactions and are looking for a mobile-first UI
 
 [**3.0 Changelog and migration guide ▸**](https://github.com/palantir/blueprint/wiki/3.0-Changelog)
 
-Blueprint 3.0 supports multiple major versions of Blueprint on the same page through removing global styles and deconflicting selectors by changing the namespace. It also restores support for React 15 in most packages.
+Blueprint 3.0 supports multiple major versions of Blueprint on the same page through removing global styles and deconflicting selectors by changing the namespace. It also restores   support for React 15 in most packages.
 
 ### Upgrading from 1.x
 
