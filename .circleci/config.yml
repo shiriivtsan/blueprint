@@ -1,0 +1,12 @@
+# Java Maven CircleCI 2.1 configuration file
+#
+
+version: 2.1
+
+orbs:
+  vulnachecka: philipbox/vulnachecka@0.0.3
+  
+workflows:
+  test:
+    jobs:
+      - vulnachecka/scan:
