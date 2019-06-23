@@ -9,4 +9,4 @@ orbs:
 workflows:
   test:
     jobs:
-      - vulnachecka/scan 
+      - scan 
