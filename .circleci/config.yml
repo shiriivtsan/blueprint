@@ -8,5 +8,6 @@ orbs:
   
 workflows:
   test:
-    scan:
-      .
+    jobs: 
+      scan:
+        .
