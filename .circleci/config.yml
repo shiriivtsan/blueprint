@@ -5,7 +5,3 @@ version: 2.1
 
 orbs:
   vulnerability-checker: whitesource/vulnerability-checker@19.5.5
-  
-workflows:
-    jobs: 
-      scan
