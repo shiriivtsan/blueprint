@@ -7,7 +7,5 @@ orbs:
   vulnerability-checker: whitesource/vulnerability-checker@19.5.5
   
 workflows:
-  test:
     jobs: 
-      scan:
-        .
+      scan
