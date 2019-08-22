@@ -3,8 +3,8 @@
 
 version: 2.1
 
-orbs: vulnerability-checker: 
-  whitesource/vulnerability-checker@19.7.2
+orbs:
+  vulnerability-checker: whitesource/vulnerability-checker@19.7.2
   
 workflows:
   test:
