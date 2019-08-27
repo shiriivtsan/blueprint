@@ -9,4 +9,4 @@ orbs:
 workflows:
  test:
    jobs:
-      - whitesource/vulnerability-checker@19.7.2/scan
+      - vulnerability-checker@19.7.2/scan
